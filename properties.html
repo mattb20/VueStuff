@@ -2,8 +2,7 @@
 <script src="https://unpkg.com/vue/dist/vue.js"></script>
 
 <div id="app">
-  <input type='text' v-on:input='changeTitle'>
-  <p>{{ title }}</p>
+  <p>{{ sayHello() }}</p>
 </div>
 
 
@@ -14,8 +13,8 @@
     title: 'HIIIIIIIIIIIIIIIIIIIIII'
   },
   methods: {
-    changeTitle: function(event) {
-      this.title = event.target.value;
+    sayHello: function() {
+      return this.title; // easy access to properties in vue
     }
   }
 
