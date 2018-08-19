@@ -4,7 +4,7 @@
    <!-- 1) Fill the <p> below with your Name and Age - using Interpolation -->
     <p>{{ nameAndAge() }}</p>
     <!-- 2) Output your age, multiplied by 3 -->
-    <p></p>
+    <p>{{ multiplyAge(3) }}</p>
     <!-- 3) Call a function to output a random float between 0 and 1 (Math.random()) -->
     <p></p>
     <!-- 4) Search any image on Google and output it here by binding the "src" attribute -->
@@ -26,6 +26,9 @@
     methods: {
       nameAndAge: function() {
         return this.name + this.age;
+      },
+      multiplyAge: function(n) {
+        return parseInt(this.age) * 3;
       }
     }
   })
