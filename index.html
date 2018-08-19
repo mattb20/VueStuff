@@ -9,7 +9,7 @@
     <p>{{ Math.random() }}</p>
     <!-- 4) Search any image on Google and output it here by binding the "src" attribute -->
     <div>
-        <img style="width:100px;height:100px">
+        <img v-bind:src="picture" style="width:100px;height:100px">
     </div>
     <!-- 5) Pre-Populate this input with your name (set the "value" attribute) -->
     <div>
@@ -21,7 +21,8 @@
     el: '#exercise',
     data: {
       name: 'Matthew, ',
-      age: '24'
+      age: '24',
+      picture: 'https://cdn.images.express.co.uk/img/dynamic/67/590x/Real-Madrid-transfer-news-Chelsea-Eden-Hazard-Ronaldo-1004677.jpg?r=1534501214258'
     },
     methods: {
       nameAndAge: function() {
