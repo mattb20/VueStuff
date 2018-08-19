@@ -13,7 +13,8 @@
     </div>
     <!-- 5) Pre-Populate this input with your name (set the "value" attribute) -->
     <div>
-        <input type="text">
+        <input type="text" v-on:input="changeText">
+        <p>{{ text }}</p>
     </div>
 </div>
 <script>
@@ -22,7 +23,8 @@
     data: {
       name: 'Matthew, ',
       age: '24',
-      picture: 'https://cdn.images.express.co.uk/img/dynamic/67/590x/Real-Madrid-transfer-news-Chelsea-Eden-Hazard-Ronaldo-1004677.jpg?r=1534501214258'
+      picture: 'https://cdn.images.express.co.uk/img/dynamic/67/590x/Real-Madrid-transfer-news-Chelsea-Eden-Hazard-Ronaldo-1004677.jpg?r=1534501214258',
+      text: ''
     },
     methods: {
       nameAndAge: function() {
@@ -30,6 +32,9 @@
       },
       multiplyAge: function(n) {
         return parseInt(this.age) * 3;
+      },
+      changeText: function(event) {
+        this.text = event.target.value;
       }
     }
   })
