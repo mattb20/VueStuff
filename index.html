@@ -1,41 +1,21 @@
-<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script src="https://npmcdn.com/vue/dist/vue.js"></script>
 
 <div id="exercise">
-   <!-- 1) Fill the <p> below with your Name and Age - using Interpolation -->
-    <p>{{ nameAndAge() }}</p>
-    <!-- 2) Output your age, multiplied by 3 -->
-    <p>{{ multiplyAge(3) }}</p>
-    <!-- 3) Call a function to output a random float between 0 and 1 (Math.random()) -->
-    <p>{{ Math.random() }}</p>
-    <!-- 4) Search any image on Google and output it here by binding the "src" attribute -->
+    <!-- 1) Show an alert when the Button gets clicked -->
     <div>
-        <img v-bind:src="picture" style="width:100px;height:100px">
+        <button v-on:click="showAlert">Show Alert</button>
     </div>
-    <!-- 5) Pre-Populate this input with your name (set the "value" attribute) -->
+    <!-- 2) Listen to the "keydown" event and store the value in a data property (hint: event.target.value gives you the value) -->
     <div>
-        <input type="text" v-on:input="changeText">
-        <p>{{ text }}</p>
+        <input type="text">
+        <p>{{ value }}</p>
+    </div>
+    <!-- 3) Adjust the example from 2) to only fire if the "key down" is the ENTER key -->
+    <div>
+        <input type="text">
+        <p>{{ value }}</p>
     </div>
 </div>
-<script>
-  new Vue({
-    el: '#exercise',
-    data: {
-      name: 'Matthew, ',
-      age: '24',
-      picture: 'https://cdn.images.express.co.uk/img/dynamic/67/590x/Real-Madrid-transfer-news-Chelsea-Eden-Hazard-Ronaldo-1004677.jpg?r=1534501214258',
-      text: ''
-    },
-    methods: {
-      nameAndAge: function() {
-        return this.name + this.age;
-      },
-      multiplyAge: function(n) {
-        return parseInt(this.age) * 3;
-      },
-      changeText: function(event) {
-        this.text = event.target.value;
-      }
-    }
-  })
+
+<script src="app.js">
 </script>

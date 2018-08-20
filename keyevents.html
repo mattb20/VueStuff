@@ -1,0 +1,35 @@
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<div id="app">
+  <button v-on:click="increase(2)">Click here!</button>
+  <p>{{ counter }}</p>
+  <p v-on:mousemove="updateCoordinates">
+    Coordinates: {{ x }} / {{ y }}
+    - <span v-on:mousemove.stop="dummy">DEAD SPOT</span>
+  </p>
+  <input type="text" v-on:keyup.enter="alertMe">
+</div>
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      counter: 0,
+      x: '',
+      y: ''
+    },
+    methods: {
+      increase: function(step) {
+        this.counter += step;
+      },
+      updateCoordinates: function(event) {
+          this.x = event.clientX;
+          this.y = event.clientY;
+      },
+      dummy: function(event) {
+        event.stopPropagation();
+      },
+      alertMe: function() {
+        alert("Alert!");
+      }
+    }
+  })
+</script>
