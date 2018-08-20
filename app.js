@@ -6,6 +6,9 @@ new Vue({
         methods: {
             showAlert: function() {
               alert("Button was clicked!");
+            },
+            storeValue: function(event) {
+              this.value = event.target.value;
             }
         }
     });
