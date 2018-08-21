@@ -1,0 +1,20 @@
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+
+<div id="app">
+  <button @click="changeLink">Click to Change Link</button>
+  <a :href="link">Link</a>
+</div>
+
+<script>
+new Vue({
+  el: '#app',
+  data: {
+    link: 'http://google.com',
+  },
+  methods: {
+    changeLink: function() {
+      this.link = 'http://apple.com'
+    }
+  }
+});
+</script>
