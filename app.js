@@ -1,14 +1,19 @@
 new Vue({
         el: '#exercise',
         data: {
-            value: ''
+            value: 0,
+        },
+        watch: {
+          counter: function(value) {
+            var vm = this;
+            setTimeout(function() {
+              vm.counter = 0;
+            }, 2000)
+          }
         },
         methods: {
-            showAlert: function() {
-              alert("Button was clicked!");
-            },
-            storeValue: function(event) {
-              this.value = event.target.value;
-            }
+          result: function() {
+            return this.value == 37 ? 'done' : 'not there yet';
+          }
         }
     });
