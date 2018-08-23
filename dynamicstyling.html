@@ -1,0 +1,20 @@
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<head>
+  <link rel="stylesheet" href="styling.css">
+</head>
+<div id="app">
+  <div class="demo"
+  @click="attachRed = !attachRed"
+  :class="{red: attachRed, blue: !attachRed}"></div>
+  <div class="demo" :class="{red: attachRed}"></div>
+  <div class="demo"></div>
+</div>
+
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      attachRed: false
+    }
+  });
+</script>
