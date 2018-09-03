@@ -4,11 +4,11 @@ new Vue({
     monsterHealth: 70%,
     userHealth: 70%
   },
-  computed: {
+  methods: {
      newGame: function() {
-       return {
-         monsterHealth: 100%,
-         userHealth: 100%
+        {
+         this.monsterHealth = 100%,
+         this.userHealth = 100%
        }
     }
   }
