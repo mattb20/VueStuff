@@ -1,0 +1,27 @@
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<div id="app">
+  <ul>
+    <li v-for="(ingredient, i) in ingredients">{{ ingredient }}  ({{ i+1 }})</li>
+  </ul>
+<hr>
+<ul>
+  <li v-for"person in persons">
+    <span v-for="(value, key) in person">{{ key }} has a value of :{{ value }}</span>
+  </li>
+<hr>
+</ul>
+</div>
+
+
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      ingredients: ['meat', 'fruit', 'cookies'],
+      persons: [
+        {name: 'Max', age: 27, color: 'red'},
+        {name: 'Anna', age: 'unknown', color: 'blue'}
+      ]
+    }
+  });
+</script>
