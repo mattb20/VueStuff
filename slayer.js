@@ -1,14 +1,15 @@
 new Vue({
   el: '#app',
   data: {
-    monsterHealth: 70%,
-    userHealth: 70%
+    monsterHealth: 100,
+    userHealth: 100,
+    gameRunning: false
   },
   methods: {
      newGame: function() {
         {
-         this.monsterHealth = 100%,
-         this.userHealth = 100%
+         this.monsterHealth = 100,
+         this.userHealth = 100
        }
     }
   }
