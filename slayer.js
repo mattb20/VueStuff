@@ -6,11 +6,12 @@ new Vue({
     gameRunning: false
   },
   methods: {
-     newGame: function() {
-        {
-         this.monsterHealth = 100,
-         this.userHealth = 100
-       }
+     newGame: function(event) {
+         this.monsterHealth = 100;
+         this.userHealth = 100;
+  },
+    attack: function(event) {
+      this.monsterHealth -= 10;
     }
   }
 })
