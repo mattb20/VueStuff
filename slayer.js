@@ -12,6 +12,8 @@ new Vue({
   },
     attack: function(event) {
       this.monsterHealth -= 10;
+      this.userHealth -= Math.floor(Math.random() * 11);
+
     }
   }
 })
