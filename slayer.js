@@ -10,10 +10,16 @@ new Vue({
          this.monsterHealth = 100;
          this.userHealth = 100;
   },
-    attack: function(event) {
+  attack: function(event) {
+      this.monsterAttack();
       this.monsterHealth -= 10;
+    },
+    heal: function(event) {
+      this.userHealth += Math.floor(Math.random() * 11);
+      this.monsterAttack();
+    },
+    monsterAttack: function() {
       this.userHealth -= Math.floor(Math.random() * 11);
-
-    }
+    },
   }
 })
