@@ -10,8 +10,8 @@
 <body>
 <div id="app">
     <div class="displayText" v-if="seen">
-      <p>You attacked for {{ userDamage }}</p>
-      <p>Monster attacked for {{ monsterDamage }}</p>
+      <p>You {{ attackOrHeal }} for {{ userDamageOrHeal }}!</p>
+      <p>Monster attacked for {{ monsterDamage }}!</p>
     </div>
 
     <section class="row">

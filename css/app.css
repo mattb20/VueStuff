@@ -2,7 +2,7 @@
     text-align: center;
 }
 .displayText {
-  font-size: 35px;
+  font-size: 20px;
   font-weight: bolder;
   display: flex;
  flex-direction: column;
