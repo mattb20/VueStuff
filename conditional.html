@@ -4,6 +4,7 @@
 <head>
 <meta charset="utf-8"/>
 </head>
+
 <div id="app">
   <p v-if="show">You can see me!</p>
   <p v-else>Now you see me!</p>
@@ -13,6 +14,7 @@
   <p v-show="show">You can also see me!</p>
   <button @click="show = !show">Switch</button>
 </div>
+
 <script>
 new Vue({
   el: '#app',
