@@ -7,7 +7,9 @@ new Vue({
     userDamageOrHeal: '',
     attackOrHeal: '',
     monsterDamage: '',
-    seen: false
+    seen: false,
+    victoryOrLoss: false,
+    winOrLose: ''
   },
   methods: {
      newGame: function(event) {
