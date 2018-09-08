@@ -3,7 +3,9 @@ new Vue({
   data: {
     monsterHealth: 100,
     userHealth: 100,
-    gameRunning: false
+    gameRunning: false,
+    damage: '',
+    seen: false
   },
   methods: {
      newGame: function(event) {
@@ -13,6 +15,8 @@ new Vue({
   attack: function(event) {
       this.monsterAttack();
       this.monsterHealth -= 10;
+      this.seen = true;
+      this.damage = 10;
     },
     heal: function(event) {
       this.userHealth += Math.floor(Math.random() * 11);
@@ -21,5 +25,9 @@ new Vue({
     monsterAttack: function() {
       this.userHealth -= Math.floor(Math.random() * 11);
     },
+    specialAttack: function() {
+      let attack = Math.floor(Math.random() * 6) * 10;
+      this.monsterHealth -= attack;
+    }
   }
 })
