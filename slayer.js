@@ -39,6 +39,10 @@ new Vue({
     specialAttack: function() {
       let attack = Math.floor(Math.random() * 6) * 10;
       this.monsterHealth -= attack;
+    },
+    displayLossOrWinMessage: function() {
+      this.victoryOrLoss = true;
+      this.winOrLose = 'lost';
     }
   }
 })
