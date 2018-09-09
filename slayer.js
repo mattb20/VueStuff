@@ -16,6 +16,7 @@ new Vue({
          this.monsterHealth = 100;
          this.userHealth = 100;
          this.seen = false;
+         this.gameRunning = true;
   },
   attack: function(event) {
       this.monsterAttack();
@@ -43,6 +44,7 @@ new Vue({
     displayLossOrWinMessage: function() {
       this.victoryOrLoss = true;
       this.winOrLose = 'lost';
+      this.gameRunning = false;
     }
   }
 })

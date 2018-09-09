@@ -38,7 +38,7 @@
         </div>
     </section>
     <section class="row controls">
-        <div class="small-12 columns">
+        <div class="small-12 columns" v-if="gameRunning">
             <button id="attack" v-on:click="attack">ATTACK</button>
             <button id="special-attack" v-on:click="specialAttack">SPECIAL ATTACK</button>
             <button id="heal" v-on:click="heal">HEAL</button>
