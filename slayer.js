@@ -24,6 +24,12 @@ new Vue({
       this.seen = true;
       this.userDamageOrHeal = 10;
       this.attackOrHeal = 'attacked';
+      if ((this.monsterHealth) === 0)
+      {
+        this.victoryOrLoss = true;
+        this.winOrLose = 'win';
+        this.gameRunning = false;
+      }
     },
     heal: function(event) {
       let heal = Math.floor(Math.random() * 11);
