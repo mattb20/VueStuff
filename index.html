@@ -1,18 +1,13 @@
-<script src="https://npmcdn.com/vue/dist/vue.js"></script>
-
-<div id="exercise">
-    <!-- 1) Show a "result" of 'not there yet' as long as "value" is not equal to 37 - you can change "value" with the buttons. Print 'done' once you did it -->
-    <div>
-        <p>Current Value: {{ value }}</p>
-        <button @click="value += 5">Add 5</button>
-        <button @click="value += 1">Add 1</button>
-        <p>{{ result() }}</p>
-    </div>
-    <!-- 2) Watch for changes in the "result" and reset the "value" after 5 seconds (hint: setTimeout(..., 5000) -->
-    <div>
-        <input type="text">
-        <p>{{ value }}</p>
-    </div>
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<!doctype HTML>
+<div id="app">
+  <h1 ref="heading">{{ title }}</h1>
+  <button v-on:click="show">Show Paragraph</button>
+  <p v-if="showParagraph">This is not always visible</p>
+</div>
+<div id="app2">
+  <h1>{{ title }}</h1>
+  <button @click="onChange">Change something in Vue 1</buton>
 </div>
 
-<script src="app.js"></script>
+<script src="instance.js"></script>
