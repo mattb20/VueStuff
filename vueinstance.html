@@ -33,14 +33,14 @@ new Vue({
   updated: function() {
     console.log('updated()');
   },
-  beforeDestory: function() {
-    console.log('beforeDestory()');
+  beforeDestroy: function() {
+    console.log('beforeDestroy()');
   },
   destroyed: function() {
     console.log('destroyed()');
   },
   methods: {
-    destory: function() {
+    destroy: function() {
       this.$destroy();
     }
   }
