@@ -33,6 +33,7 @@ var vm2 = new Vue({
   methods: {
     onChange: function() {
       vm1.title = 'Changed title again';
+      vm1.showParagraph = false;
     }
   }
 })
