@@ -1,5 +1,6 @@
 <template>
   <header-cmp></header-cmp>
+  <server-index-cmp></server-index-cmp>
 </template>
         <hr>
         <div class="row">
