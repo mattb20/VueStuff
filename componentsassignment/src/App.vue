@@ -1,15 +1,9 @@
 <template>
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12">
-                <header>
-                    <h1>Server Status</h1>
-                </header>
-            </div>
-        </div>
+  <header-cmp></header-cmp>
+</template>
         <hr>
         <div class="row">
-            <div class="col-xs-12 col-sm-6">
+            <div class="col-x s-12 col-sm-6">
                 <ul class="list-group">
                     <li
                             class="list-group-item"
@@ -34,6 +28,9 @@
 </template>
 
 <script>
+  export default{
+    components: {}
+  }
 </script>
 
 <style>
