@@ -2,6 +2,7 @@
     <div class="component">
         <h3>You may view the User Details here:</h3>
         <p>User Name: {{ reverseName() }}</p>
+        <p>User Age: {{ userAge }}</p>
         <button @click="resetName()">Reset Name</button>
     </div>
 </template>
@@ -13,6 +14,10 @@
         type: String,
         default: 'Slim Shady'
       },
+      userAge: {
+        type: Number,
+        default: 27
+    },
       resetFn: Function
     },
     methods: {
